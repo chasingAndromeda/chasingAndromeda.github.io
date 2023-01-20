@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: 'Baloo 2', cursive;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+blockquote,
+q {
+	quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #f7ede2;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.pricing_panel_main {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	max-width: 900px;
+    padding: 15px 25px;
+	justify-content: space-around;
+}
+
+.pricing_panel {
+	background-color: #f28482;
+	border-top: 5px solid #f7ede2;
+	text-align: center;
+	padding: 30px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.pricing_panel:first-child {	
+	border-top: none;
+	background-color: #f28482;
+	text-align: center;
+}
+
+#featured {
+	background-color: #84a59d;
+}
+
+.tier_item {
+	font-size: 40px;
+	color: #f5cac3;
+	margin-bottom: 10px;
+}
+
+.price_item {
+	font-size: 42px;
+	color: #f7ede2;
+	margin-bottom: 40px;
+}
+
+.feature_item {
+	color: #f7ede2;
+	border-top: 1px solid #f7ede2;
+	padding: 20px;
+
+}
+
+.sign_up_button {
+	margin-top: 20px;
+	background-color:#f28482;
+	border: solid 1px #f7ede2;
+	font-size: 20px;
+	color: #f7ede2;
+	border-radius: 10px;
+	padding: 15px 30px;
+	transition:  0.4s;
+	margin-bottom: 0px;
+	width: 200px;
+}
+ 
+.sign_up_button:hover {
+	margin-top: 20px;
+	background-color:#f7ede2;
+	font-size: 20px;
+	color: #f28482;
+	border-radius: 10px;
+	padding: 15px 30px;
+	cursor: pointer;
+	 
+}
+
+.feature_list {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+#featured .sign_up_button {
+	border: solid 1px #f6bd60;
+	background-color: #84a59d;
+	color:  #f6bd60;
+	margin-bottom: 0px;
+}
+
+#featured .sign_up_button:hover {
+	border: solid 1px #f6bd60;
+	background-color: #f6bd60;
+	color:  #84a59d;
+
+}
+
+@media (min-width: 900px) {
+	.pricing_panel_main {
+		flex-direction: row;
+	}
+	
+	.pricing_panel {
+		border: 2.5px solid #f7ede2;
+		border-radius: 10px;
+		width: 400px;
+
+	}
+
+	.pricing_panel:first-child {
+		border: 2.5px solid #f7ede2;
+	}
+}
