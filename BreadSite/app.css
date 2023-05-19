@@ -1,0 +1,100 @@
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: #d8c8b2;
+}
+
+#mainNav {
+    font-weight: 100;
+    /* margin-bottom: 0px; */
+}
+
+#mainNav .navbar-brand {
+    color: #885837;
+    font-size: 1.5rem;
+    padding-left: 10px;
+}
+
+#mainNav .nav-link {
+    color: #ba9166;
+    font-size: 1.5rem;
+}
+
+#mainNav .nav-link:hover {
+    color: #885837;
+}
+
+.navbar.scrolled {
+    background: #F3e9dc;
+    transition: background 500ms;
+ }
+
+#h11 {
+    color: #ba9166;
+}
+
+#h12, h2 {
+    color: #885837;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+.imgHeading, .imgContent {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.midSection {
+    background-color: #F3e9dc;
+}
+
+.content {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.content p {
+    font-size: 1.5em;
+    color: #885837;
+    font-weight: 10;
+
+}
+
+.breadIcon {
+    width: 20%;
+}
+
+#footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: #d8c8b2;
+    color: #885837;
+}
+
+#footer ul {
+    display: flex;
+}
+
+#footer svg {
+    display: inline;
+}
+
+#footer a {
+    color: #885837;
+    text-decoration: none;
+
+}
+
+.breadImage {
+    margin: 0px;
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 3rem; 
+    }
+}
