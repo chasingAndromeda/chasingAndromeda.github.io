@@ -1,0 +1,87 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1>Budget Planner</h1>
+    <div id="budgetPlannerContainer">
+        <div id="budgetEntryContainer">
+            <form action="/lol" id="monthlyBudgetForm">
+                <input type="text" id="budgetInput" placeholder="This month's budget">
+                <button id="enterBtn">Enter</button>
+            </form>
+            <button id="resetBtn" display="inline" >Reset</button>
+        </div>
+        <h2 id="monthlyBudget"></h2>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Planner</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <h1 class="is-size-3 has-text-centered">Budget Planner</h1>
+
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+
+                <div class="card" id="firstCard">
+                    <div class="card-content">
+                    <div class="content">
+                        <div id="totalExpenseContainer">
+                            <h3 id="remainingTotal">Enter budget to begin</h3>
+                            <progress class="progress is-primary is-large" value="0" max="100" id="percentage"></progress>
+                            <h6 id="monthlyBudget"></h6>
+                            <h6 id="totalExpensesHeader" hidden><span id="totalExpenses"></span></h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                    <div class="content">
+                        <div id="budgetEntryContainer">
+                            <p>Budget</p>
+                            <input type="text" id="budgetInput" placeholder="This month's budget">
+                            <button id="enterBtn" class="button is-primary">Enter</button>
+                            <button id="resetBtn" class="button is-danger">Reset</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-content">
+                    <div class="content">
+                        <div id="budgetExpensesContainer">
+                            <p>Expenses</p>
+                            <input type="text" id="expenseTypeInput" placeholder="Type" disabled>
+                            <input type="text" id="expenseInput" placeholder="Amount" disabled>
+                            <button id="expenseEnterBtn" disabled>Enter</button>
+                            <ul id="expenseList"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  
+      
+    <script src="app.js"></script>
+</body>
+
+</html>
