@@ -41,47 +41,64 @@
 
                 <div class="card" id="firstCard">
                     <div class="card-content">
-                    <div class="content">
-                        <div id="totalExpenseContainer">
-                            <h3 id="remainingTotal">Enter budget to begin</h3>
-                            <progress class="progress is-primary is-large" value="0" max="100" id="percentage"></progress>
-                            <h6 id="monthlyBudget"></h6>
-                            <h6 id="totalExpensesHeader" hidden><span id="totalExpenses"></span></h6>
+                        <div class="content">
+                            <div id="totalExpenseContainer">
+                                <h3 id="remainingTotal">$-- remaining this month</h3>
+                                <progress class="progress is-primary is-large" value="0" max="100"
+                                    id="percentage"></progress>
+                                <h6 id="monthlyBudget">Budget: $0</h6>
+                                <h6 id="totalExpensesHeader"><span id="totalExpenses">Total Expenses: $0</span></h6>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-content">
-                    <div class="content">
-                        <div id="budgetEntryContainer">
-                            <p>Budget</p>
-                            <input type="text" id="budgetInput" placeholder="This month's budget">
-                            <button id="enterBtn" class="button is-primary">Enter</button>
-                            <button id="resetBtn" class="button is-danger">Reset</button>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="content">
+                                <div id="budgetEntryContainer">
+                                    <p>Budget</p>
+                                    <div class="columns">
+                                        <div class="column is-one-quarter">
+                                            <input class="input" type="text" placeholder="This month's budget"
+                                                id="budgetInput">
+                                        </div>
+                                        <div class="column">
+                                            <button id="enterBtn" class="button is-primary">Enter</button>
+                                            <button id="resetBtn" class="button is-danger">Reset</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
 
-                <div class="card">
-                    <div class="card-content">
-                    <div class="content">
-                        <div id="budgetExpensesContainer">
-                            <p>Expenses</p>
-                            <input type="text" id="expenseTypeInput" placeholder="Type" disabled>
-                            <input type="text" id="expenseInput" placeholder="Amount" disabled>
-                            <button id="expenseEnterBtn" disabled>Enter</button>
-                            <ul id="expenseList"></ul>
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="content">
+                                    <div id="budgetExpensesContainer">
+                                        <p>Expenses</p>
+                                        <div class="columns">
+                                            <div class="column is-one-quarter">
+                                                <input class="input" type="text" id="expenseTypeInput"
+                                                    placeholder="Type" disabled>
+                                            </div>
+                                            <div class="column is-one-quarter">
+                                                <input class="input" type="text" id="expenseInput" placeholder="Amount"
+                                                    disabled>
+                                            </div>
+                                            <div class="column">
+                                                <button id="expenseEnterBtn" class="button is-primary"
+                                                    disabled>Enter</button>
+                                            </div>
+                                        </div>
+                                        <ul id="expenseList"></ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-  
-      
-    <script src="app.js"></script>
+            <script src="app.js"></script>
 </body>
 
 </html>

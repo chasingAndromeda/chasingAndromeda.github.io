@@ -1,20 +1,3 @@
-// const form = document.querySelector('#monthlyBudgetForm');
-// const budgetInput = document.querySelector('#budgetInput');
-// const monthlyBudgetHeader = document.querySelector('#monthlyBudget');
-// const enterBtn = document.querySelector('#enterBtn');
-
-// form.addEventListener('submit', function(e){
-//     e.preventDefault();
-//     let monthlyBudget = budgetInput.value;
-//     monthlyBudgetHeader.textContent = `This Month's Budget is $${monthlyBudget}`
-//     budgetInput.setAttribute("disabled", "");
-//     enterBtn.setAttribute("disabled", "");
-
-// })
-
-
-// const form = document.querySelector('#monthlyBudgetForm');
-
 const budgetInput = document.querySelector('#budgetInput');
 const monthlyBudgetHeader = document.querySelector('#monthlyBudget');
 const enterBtn = document.querySelector('#enterBtn');
@@ -38,6 +21,7 @@ let percentageAmount = 0;
 
 enterBtn.addEventListener('click', function () {
     if(checkIfAmountIsValid(parseInt(budgetInput.value))){
+        budgetInput.classList.remove("is-danger");
         monthlyBudget = budgetInput.value;
         monthlyBudgetHeader.textContent = `Budget: $${monthlyBudget}`
         budgetInput.setAttribute("disabled", "");
@@ -52,23 +36,27 @@ enterBtn.addEventListener('click', function () {
         expenseTypeInput.removeAttribute("disabled");
         expenseEnterBtn.removeAttribute("disabled");
     }
+    else {
+       budgetInput.classList.add("is-danger");
+    }
 })
 
 resetBtn.addEventListener('click', function () {
     budgetInput.value = "";
     budgetInput.removeAttribute("disabled");
     enterBtn.removeAttribute("disabled");
-    monthlyBudgetHeader.textContent = "";
-    // expenseContainer.setAttribute('hidden', 'true');
-    totalExpensesVal.textContent = "";
     remainingVal.textContent = "";
-    totalExpensesVal.setAttribute('hidden', 'true');
-    totalExpensesHeader.setAttribute('hidden', 'true');
     expenseInput.setAttribute("disabled", "");
     expenseTypeInput.setAttribute("disabled", "");
     expenseEnterBtn.setAttribute("disabled", "");
     totalExpenses = 0;
-    remainingTotal = 0;
+    remainingTotal = "--";
+    monthlyBudget = 0;
+    expenseTypeInput.value = "";
+    expenseTypeInput.value = "";
+    totalExpensesVal.textContent = `Total Expenses: $${totalExpenses}`;
+    monthlyBudgetHeader.textContent = `Budget: $${monthlyBudget}`
+    remainingVal.textContent = `$${remainingTotal} remaining this month`
     percentageVisual.setAttribute("value", "0");
     deleteExpenseItems();
 
@@ -78,6 +66,7 @@ expenseEnterBtn.addEventListener('click', function () {
     console.log('hello');
     const expenseItem = document.createElement('li');
     if(checkIfAmountIsValid(parseInt(expenseInput.value))){
+        expenseInput.classList.remove("is-danger");
         expenseItem.textContent = `${expenseTypeInput.value} - $${expenseInput.value}`;
         expenseItem.classList.add('expenseItemEl');
         expenseList.append(expenseItem);
@@ -94,6 +83,9 @@ expenseEnterBtn.addEventListener('click', function () {
         if (totalExpenses > monthlyBudget) {
             console.log("you're overboard boy!");
         }
+    }
+    else {
+        expenseInput.classList.add("is-danger");
     }
 })
 
