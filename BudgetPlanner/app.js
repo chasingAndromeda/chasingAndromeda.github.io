@@ -58,12 +58,12 @@ resetBtn.addEventListener('click', function () {
     monthlyBudgetHeader.textContent = `Budget: $${monthlyBudget}`
     remainingVal.textContent = `$${remainingTotal} remaining this month`
     percentageVisual.setAttribute("value", "0");
+    expenseInput.classList.remove("is-danger");
     deleteExpenseItems();
 
 })
 
 expenseEnterBtn.addEventListener('click', function () {
-    console.log('hello');
     const expenseItem = document.createElement('li');
     if(checkIfAmountIsValid(parseInt(expenseInput.value))){
         expenseInput.classList.remove("is-danger");
